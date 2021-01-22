@@ -1,6 +1,6 @@
 /*
  * File:   Lab1.c
- * Author: colum
+ * Author: Emilio Velasquez 18352
  *
  * Created on 22 de enero de 2021, 08:12 AM
  */
@@ -39,7 +39,7 @@ void semaforo(void);
 void setup(void);
 void jugador1(void);
 void jugador2(void);
-void rst(void);
+void rst(void);             //Se hizo un prototipo de las funciones, se declaro y mas abajo se definio
 int bandera_inicio = 0;
 /*int banderaP1 = 0;
 int banderaP2 = 0;*/
@@ -49,30 +49,29 @@ int banderaP2 = 0;*/
 
 void main(void) 
 {
-    setup();
+    setup();           // Se creo el loop donde se ejecutaran las instrucciones
     while (1)
     {
-        if ((PORTBbits.RB0 == 1) && (!bandera_inicio))
-        {
+        if ((PORTBbits.RB0 == 1) && (!bandera_inicio))      // al presionar boton 1 y tener la bandera de inicio desactivada
+        {                                                   // llama la funcion de semaforo para iniciar la cuenta regresiva
             semaforo();
         }
         
-        if ((PORTBbits.RB1 == 1) && (bandera_inicio))
-        {
+        if ((PORTBbits.RB1 == 1) && (bandera_inicio))      //al presionar boton 2 y tener la bandera de inicio activada
+        {                                                  //llama la funcion de jugador 1 y empieza a aumentar las leds
             jugador1();
-            __delay_ms(50);
+            __delay_ms(50);                                //se hace un delay de 50ms para evitar el rebote
         }
-        if ((PORTBbits.RB2 == 1) && (bandera_inicio))
-        {
+        if ((PORTBbits.RB2 == 1) && (bandera_inicio))     //al presionar boton 3 y tener la bandera de inicio activada
+        {                                                 //llama la funcion de jugador 2 y empieza a aumentar las leds
             jugador2();
-            __delay_ms(50);
+            __delay_ms(50);                               //se hace un delay de 50ms para evitar el rebote
         }
-        if ((PORTBbits.RB3 == 1))
-        {
+        if ((PORTBbits.RB3 == 1))                        //al presionar boton 4 llama la funcion de reset y reinicia el juego 
+        {                                                
             rst();
-            __delay_ms(50);
+            __delay_ms(50);                              //se hace un delay de 50ms para evitar el rebote
         }
-        PORTBbits.RB4 = bandera_inicio;
     }
 }
 
@@ -80,83 +79,83 @@ void main(void)
 
 
 
-void setup(void)
+void setup(void)                                        
 {
-    ANSEL = 0;
+    ANSEL = 0;                  //se establece que los puertos seran analogos
     ANSELH = 0;
-    
-    TRISA = 0;
+        
+    TRISA = 0;                  //establecemos puertos en A como salida y se limpian
     PORTA = 0;
     
-    TRISB = 0b00001111;
+    TRISB = 0b00001111;         //establecemos los primeros 3 como entrada y el resto como salida en puerto B y se limpian
     PORTB = 0;
     
-    TRISC = 0;
+    TRISC = 0;                  //establecemos puertos en C como salida y se limpian
     PORTC = 0;
     
-    TRISE = 0;
+    TRISE = 0;                  //establecemos puertos en E como salida y se limpian
     PORTE = 0;
     
 }
 
-void semaforo(void)
+void semaforo(void)             //se define la funcion de semforo de partida
 {
-    PORTE = 1;
+    PORTE = 1;                  //se enciende la primera luz de partida y se espera 100ms
     __delay_ms(100);
-    for (int i=0; i<=2; i++)
+    for (int i=0; i<=2; i++)    //un for que hace 2 repeticiones
     {
-     PORTE = PORTE << 1;
+     PORTE = PORTE << 1;        //se corre el bit 1 posicion a la derecha y se hace un delay de 100ms
      __delay_ms(100);  
     }
-    bandera_inicio = 1;
+    bandera_inicio = 1;         //se hace verdadera la bandera de que inicio la carrera y se limpian contadores al reiniciar la partida
     PORTA = 0;
     PORTB = 0;
     PORTC = 0;
 }
 
-void jugador1(void)
+void jugador1(void)             //se define la funcion de jugador 1 de la partida
 {
-    if (PORTA == 0)
+    if (PORTA == 0)             //se crea un if en el cual al comenzar en 0 y presionar el boton dara la primera vuelta 
     {
        PORTA = PORTA++; 
     }
-    else
+    else                        //al estar iniciado ya no sumara uno
     {
-        PORTA = PORTA << 1;
-        if (PORTAbits.RA7 == 1)
+        PORTA = PORTA << 1;     //sino desplazara el bit a la derecha
+        if (PORTAbits.RA7 == 1)//si el bit numero 7 esta encendido significa que gano 
         {
-            PORTBbits.RB6 = 1;
-            bandera_inicio= 0;
+            PORTBbits.RB6 = 1; //encendera la led de ganador numero 1
+            bandera_inicio= 0; //apaga la bandera de inicio para que el jugador 2 no siga y perdio
         }
         else
         {
-            PORTBbits.RB6 = 0;
+            PORTBbits.RB6 = 0; //de lo contrario no enciende la bandera de ganador jugador 1
         }  
     }
 }
 
-void jugador2(void)
+void jugador2(void)             //se define la funcion de jugador 2 de la partida
 {
-    if (PORTC == 0)
+    if (PORTC == 0)             //se crea un if en el cual al comenzar en 0 y presionar el boton dara la primera vuelta 
     {
        PORTC = PORTC++; 
-    }
-    else
-    {
-        PORTC = PORTC << 1;
-        if (PORTCbits.RC7 == 1)
+    }   
+    else                        //al estar iniciado ya no sumara uno
+    {       
+        PORTC = PORTC << 1;     //sino desplazara el bit a la derecha
+        if (PORTCbits.RC7 == 1)//si el bit numero 7 esta encendido significa que gano 
         {
-            PORTBbits.RB7 = 1;
-            bandera_inicio= 0;
+            PORTBbits.RB7 = 1; //encendera la led de ganador numero 1
+            bandera_inicio= 0; //apaga la bandera de inicio para que el jugador 1 no siga y perdio
         }
         else
         {
-            PORTBbits.RB7 = 0;
+            PORTBbits.RB7 = 0; //de lo contrario no enciende la bandera de ganador jugador 2
         }
     }
 }
 
-void rst(void)
+void rst(void)                  //se define la funcion de reset y limpia todos los puertos y resetea bandera
 {
     PORTA = 0;
     PORTB = 0;

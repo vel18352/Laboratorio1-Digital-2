@@ -2693,7 +2693,6 @@ void main(void)
             rst();
             _delay((unsigned long)((50)*(8000000/4000.0)));
         }
-        PORTBbits.RB4 = bandera_inicio;
     }
 }
 

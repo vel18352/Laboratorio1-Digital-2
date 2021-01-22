@@ -11,17 +11,17 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\colum\AppData\Local\Temp\sc8s.o
+$C:\Users\colum\AppData\Local\Temp\sng.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\Lab1Digital2.X.production.o
 cinit CODE 0 7FA 7FA 6 2
-text1 CODE 0 730 730 1E 2
-text2 CODE 0 74E 74E 43 2
-text3 CODE 0 6EF 6EF 9 2
-text4 CODE 0 714 714 1C 2
-text5 CODE 0 6F8 6F8 1C 2
-maintext CODE 0 791 791 69 2
+text1 CODE 0 737 737 1E 2
+text2 CODE 0 755 755 43 2
+text3 CODE 0 6F6 6F6 9 2
+text4 CODE 0 71B 71B 1C 2
+text5 CODE 0 6FF 6FF 1C 2
+maintext CODE 0 798 798 62 2
 cstackCOMMON COMMON 1 70 70 7 1
 bssCOMMON COMMON 1 77 77 2 1
 config CONFIG 4 2007 2007 2 2
@@ -39,13 +39,13 @@ BANK0 20-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
-CONST 3-6EE 2
+CONST 3-6F5 2
 CONST 800-1FFF 2
-ENTRY 3-6EE 2
+ENTRY 3-6F5 2
 ENTRY 800-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
-CODE 3-6EE 2
+CODE 3-6F5 2
 CODE 800-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -53,9 +53,9 @@ SFR2 100-10F 1
 SFR3 180-18F 1
 COMMON 79-7D 1
 EEDATA 2100-21FF 2
-STRCODE 3-6EE 2
+STRCODE 3-6F5 2
 STRCODE 800-1FFF 2
-STRING 3-6EE 2
+STRING 3-6F5 2
 STRING 800-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -71,82 +71,81 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Lab1Digital2.X.production.o
-7FA cinit CODE >455:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FA cinit CODE >458:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FA cinit CODE >469:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FB cinit CODE >470:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FC cinit CODE >476:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FC cinit CODE >478:C:\Users\colum\AppData\Local\Temp\sc8s.s
-7FD cinit CODE >479:C:\Users\colum\AppData\Local\Temp\sc8s.s
-6F8 text5 CODE >117:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F8 text5 CODE >119:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6FF text5 CODE >121:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-705 text5 CODE >122:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-706 text5 CODE >125:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-70A text5 CODE >126:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-70E text5 CODE >128:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-70F text5 CODE >129:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-711 text5 CODE >130:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-712 text5 CODE >131:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-712 text5 CODE >133:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-713 text5 CODE >136:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-714 text4 CODE >138:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-714 text4 CODE >140:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-71B text4 CODE >142:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-721 text4 CODE >143:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-722 text4 CODE >146:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-726 text4 CODE >147:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72A text4 CODE >149:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72B text4 CODE >150:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72D text4 CODE >151:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72E text4 CODE >152:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72E text4 CODE >154:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-72F text4 CODE >157:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6EF text3 CODE >159:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6EF text3 CODE >161:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F2 text3 CODE >162:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F3 text3 CODE >163:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F4 text3 CODE >164:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F5 text3 CODE >165:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-6F7 text3 CODE >166:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-74E text2 CODE >102:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-74E text2 CODE >104:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-752 text2 CODE >105:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-75F text2 CODE >106:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-761 text2 CODE >108:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-767 text2 CODE >109:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-774 text2 CODE >110:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-787 text2 CODE >111:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-78B text2 CODE >112:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-78E text2 CODE >113:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-78F text2 CODE >114:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-790 text2 CODE >115:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-730 text1 CODE >83:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-730 text1 CODE >85:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-733 text1 CODE >86:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-734 text1 CODE >88:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-737 text1 CODE >89:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-73A text1 CODE >91:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-73E text1 CODE >92:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-741 text1 CODE >94:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-744 text1 CODE >95:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-747 text1 CODE >97:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-74A text1 CODE >98:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-74D text1 CODE >100:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-791 maintext CODE >50:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-791 maintext CODE >52:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-796 maintext CODE >55:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7A2 maintext CODE >57:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7A7 maintext CODE >60:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7B3 maintext CODE >62:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7B8 maintext CODE >63:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7C1 maintext CODE >65:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7CD maintext CODE >67:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7D2 maintext CODE >68:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7DB maintext CODE >70:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7E1 maintext CODE >72:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7E6 maintext CODE >73:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
-7EF maintext CODE >75:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7FA cinit CODE >455:C:\Users\colum\AppData\Local\Temp\sng.s
+7FA cinit CODE >458:C:\Users\colum\AppData\Local\Temp\sng.s
+7FA cinit CODE >469:C:\Users\colum\AppData\Local\Temp\sng.s
+7FB cinit CODE >470:C:\Users\colum\AppData\Local\Temp\sng.s
+7FC cinit CODE >476:C:\Users\colum\AppData\Local\Temp\sng.s
+7FC cinit CODE >478:C:\Users\colum\AppData\Local\Temp\sng.s
+7FD cinit CODE >479:C:\Users\colum\AppData\Local\Temp\sng.s
+6FF text5 CODE >116:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6FF text5 CODE >118:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+706 text5 CODE >120:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+70C text5 CODE >121:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+70D text5 CODE >124:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+711 text5 CODE >125:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+715 text5 CODE >127:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+716 text5 CODE >128:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+718 text5 CODE >129:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+719 text5 CODE >130:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+719 text5 CODE >132:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+71A text5 CODE >135:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+71B text4 CODE >137:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+71B text4 CODE >139:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+722 text4 CODE >141:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+728 text4 CODE >142:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+729 text4 CODE >145:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+72D text4 CODE >146:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+731 text4 CODE >148:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+732 text4 CODE >149:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+734 text4 CODE >150:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+735 text4 CODE >151:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+735 text4 CODE >153:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+736 text4 CODE >156:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6F6 text3 CODE >158:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6F6 text3 CODE >160:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6F9 text3 CODE >161:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6FA text3 CODE >162:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6FB text3 CODE >163:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6FC text3 CODE >164:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+6FE text3 CODE >165:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+755 text2 CODE >101:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+755 text2 CODE >103:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+759 text2 CODE >104:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+766 text2 CODE >105:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+768 text2 CODE >107:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+76E text2 CODE >108:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+77B text2 CODE >109:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+78E text2 CODE >110:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+792 text2 CODE >111:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+795 text2 CODE >112:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+796 text2 CODE >113:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+797 text2 CODE >114:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+737 text1 CODE >82:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+737 text1 CODE >84:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+73A text1 CODE >85:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+73B text1 CODE >87:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+73E text1 CODE >88:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+741 text1 CODE >90:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+745 text1 CODE >91:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+748 text1 CODE >93:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+74B text1 CODE >94:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+74E text1 CODE >96:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+751 text1 CODE >97:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+754 text1 CODE >99:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+798 maintext CODE >50:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+798 maintext CODE >52:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+79D maintext CODE >55:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7A9 maintext CODE >57:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7AE maintext CODE >60:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7BA maintext CODE >62:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7BF maintext CODE >63:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7C8 maintext CODE >65:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7D4 maintext CODE >67:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7D9 maintext CODE >68:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7E2 maintext CODE >70:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7E8 maintext CODE >72:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
+7ED maintext CODE >73:C:\Users\colum\MPLABXProjects\Lab1Digital2.X\Lab1.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -169,34 +168,34 @@ __size_of_jugador1 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production
 __size_of_jugador2 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\colum\AppData\Local\Temp\sc8s.o
-_main F22 0 CODE 0 maintext dist/default/production\Lab1Digital2.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\colum\AppData\Local\Temp\sng.o
+_main F30 0 CODE 0 maintext dist/default/production\Lab1Digital2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
-start 0 0 CODE 0 init C:\Users\colum\AppData\Local\Temp\sc8s.o
+start 0 0 CODE 0 init C:\Users\colum\AppData\Local\Temp\sng.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sc8s.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\colum\AppData\Local\Temp\sng.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-_jugador1 DF0 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
-_jugador2 E28 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
+_jugador1 DFE 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
+_jugador2 E36 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-__end_of_jugador1 E28 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
-__end_of_jugador2 E60 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
+__end_of_jugador1 E36 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
+__end_of_jugador2 E6E 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\colum\AppData\Local\Temp\sc8s.o
-___stacklo 0 0 ABS 0 - C:\Users\colum\AppData\Local\Temp\sc8s.o
+___stackhi 0 0 ABS 0 - C:\Users\colum\AppData\Local\Temp\sng.o
+___stacklo 0 0 ABS 0 - C:\Users\colum\AppData\Local\Temp\sng.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 start_initialization FF4 0 CODE 0 cinit dist/default/production\Lab1Digital2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\colum\AppData\Local\Temp\sc8s.o
+___int_sp 0 0 STACK 2 stack C:\Users\colum\AppData\Local\Temp\sng.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -236,16 +235,16 @@ __S0 800 0 ABS 0 - -
 __S1 79 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_rst DDE 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
-__end_of_rst DF0 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
+_rst DEC 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
+__end_of_rst DFE 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\colum\AppData\Local\Temp\sc8s.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\colum\AppData\Local\Temp\sng.o
 __size_of_semaforo 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 _bandera_inicio 77 0 COMMON 1 bssCOMMON dist/default/production\Lab1Digital2.X.production.o
-__pmaintext F22 0 CODE 0 maintext dist/default/production\Lab1Digital2.X.production.o
+__pmaintext F30 0 CODE 0 maintext dist/default/production\Lab1Digital2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-_semaforo E9C 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
+_semaforo EAA 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -255,16 +254,16 @@ semaforo@i 73 0 COMMON 1 cstackCOMMON dist/default/production\Lab1Digital2.X.pro
 __pbssCOMMON 77 0 COMMON 1 bssCOMMON dist/default/production\Lab1Digital2.X.production.o
 __Lend_init 0 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_semaforo F22 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
+__end_of_semaforo F30 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
 end_of_initialization FF8 0 CODE 0 cinit dist/default/production\Lab1Digital2.X.production.o
 __Hintentry 0 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 0 0 CODE 0 reset_vec -
-__ptext1 E60 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
-__ptext2 E9C 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
-__ptext3 DDE 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
-__ptext4 E28 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
-__ptext5 DF0 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
+__ptext1 E6E 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
+__ptext2 EAA 0 CODE 0 text2 dist/default/production\Lab1Digital2.X.production.o
+__ptext3 DEC 0 CODE 0 text3 dist/default/production\Lab1Digital2.X.production.o
+__ptext4 E36 0 CODE 0 text4 dist/default/production\Lab1Digital2.X.production.o
+__ptext5 DFE 0 CODE 0 text5 dist/default/production\Lab1Digital2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -283,10 +282,10 @@ _TRISA 85 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
-__end_of_setup E9C 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
+__end_of_setup EAA 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_setup E60 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
+_setup E6E 0 CODE 0 text1 dist/default/production\Lab1Digital2.X.production.o
 __size_of_rst 0 0 ABS 0 - dist/default/production\Lab1Digital2.X.production.o
 __initialization FF4 0 CODE 0 cinit dist/default/production\Lab1Digital2.X.production.o
 # %SPLITSTAB Section
@@ -315,12 +314,12 @@ __initialization FF4 0 CODE 0 cinit dist/default/production\Lab1Digital2.X.produ
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7FA FF4 6 2
-text1 0 730 E60 1E 2
-text2 0 74E E9C 43 2
-text3 0 6EF DDE 9 2
-text4 0 714 E28 1C 2
-text5 0 6F8 DF0 1C 2
-maintext 0 791 F22 69 2
+text1 0 737 E6E 1E 2
+text2 0 755 EAA 43 2
+text3 0 6F6 DEC 9 2
+text4 0 71B E36 1C 2
+text5 0 6FF DFE 1C 2
+maintext 0 798 F30 62 2
 cstackCOMMON 1 70 70 9 1
 reset_vec 0 0 0 3 2
 # %NOTES Section
